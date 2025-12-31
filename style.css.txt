@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* شاشة الباسورد */
+#login {
+  margin-top: 120px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  width: 240px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+  background: white;
+  color: #ff4d6d;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#error {
+  margin-top: 10px;
+  color: yellow;
+}
+
+/* المحتوى */
+#content {
+  padding: 25px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* كتابة متحركة */
+.typing {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.8;
+  min-height: 120px;
+}
+
+/* الصور */
+.slider {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.slider img {
+  width: 220px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s;
+}
+
+.slider img:hover {
+  transform: scale(1.07);
+}
+
+/* القلوب */
+.hearts::before {
+  content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  animation: fall 12s linear infinite;
+  font-size: 22px;
+}
+
+@keyframes fall {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+  .slider img {
+    width: 90%;
+  }
+}
