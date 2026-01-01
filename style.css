@@ -1,79 +1,58 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e85a78;
-  color: white;
+  background: linear-gradient(#ff7aa2, #ffb3c7);
   text-align: center;
+  color: white;
 }
 
+/* الباسورد */
+.login {
+  margin-top: 120px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#error {
+  margin-top: 10px;
+  color: yellow;
+}
+
+/* المحتوى */
 .hidden {
   display: none;
 }
 
 .section {
-  padding: 60px 20px;
-}
-
-.login {
-  padding-top: 120px;
-}
-
-.login input {
-  padding: 10px;
-  font-size: 16px;
-}
-
-.login button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.slider {
-  position: relative;
-  width: 300px;
-  margin: auto;
-}
-
-.slider img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-.arrow {
-  position: absolute;
-  top: 45%;
-  background: rgba(255,255,255,0.6);
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.left { left: -40px; }
-.right { right: -40px; }
-
-.dots {
-  margin-top: 10px;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #fff5;
-  border-radius: 50%;
-  margin: 5px;
-}
-
-.dot.active {
-  background: white;
+  padding: 80px 20px;
 }
 
 .text {
-  line-height: 2;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.8;
 }
 
-.end {
-  font-size: 20px;
+/* السلايدر */
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider img {
+  width: 250px;
+  border-radius: 15px;
 }
