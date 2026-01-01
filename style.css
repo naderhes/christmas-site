@@ -1,102 +1,67 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
   color: white;
   text-align: center;
-  overflow-x: hidden;
+}
+
+#login {
+  margin-top: 100px;
+}
+
+#login input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#login button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .hidden {
   display: none;
 }
 
-/* شاشة الباسورد */
-#login {
-  margin-top: 120px;
+.title {
+  margin-top: 40px;
+  font-size: 32px;
 }
 
-input {
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  width: 240px;
-  font-size: 16px;
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-button {
-  padding: 12px 25px;
-  border-radius: 10px;
+.slider-img {
+  width: 280px;
+  border-radius: 20px;
+  margin: 0 15px;
+}
+
+.arrow {
+  font-size: 30px;
+  background: none;
   border: none;
-  margin-top: 15px;
-  background: white;
-  color: #ff4d6d;
-  font-size: 16px;
+  color: white;
   cursor: pointer;
 }
 
-#error {
-  margin-top: 10px;
-  color: yellow;
+.message {
+  margin: 80px auto;
+  width: 80%;
+  font-size: 20px;
 }
 
-/* المحتوى */
-#content {
-  padding: 25px;
+.music-box {
+  margin: 80px 0;
 }
 
-.title {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-/* كتابة متحركة */
-.typing {
-  font-size: 18px;
-  max-width: 600px;
-  margin: auto;
-  line-height: 1.8;
-  min-height: 120px;
-}
-
-/* الصور */
-.slider {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.slider img {
-  width: 220px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: transform 0.4s;
-}
-
-.slider img:hover {
-  transform: scale(1.07);
-}
-
-/* القلوب */
-.hearts::before {
-  content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
-  position: fixed;
-  top: -10px;
-  width: 100%;
-  animation: fall 12s linear infinite;
+.footer {
+  margin: 100px 0;
   font-size: 22px;
-}
-
-@keyframes fall {
-  0% { top: -10%; }
-  100% { top: 110%; }
-}
-
-/* موبايل */
-@media (max-width: 600px) {
-  .slider img {
-    width: 90%;
-  }
 }
