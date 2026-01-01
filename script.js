@@ -18,19 +18,21 @@ const message = `
 let index = 0;
 
 function checkPassword() {
-  const input = document.getElementById("password").value;
-  const error = document.getElementById("error");
+  const input = document.getElementById("password").value.trim();
+
+  // تاريخ الميلاد بالصّيغة اللي إنت عايزها
+  const correctPassword = "24/4/2002";
 
   if (input === correctPassword) {
     document.getElementById("login").style.display = "none";
     document.getElementById("content").classList.remove("hidden");
 
-    document.getElementById("name").innerText = loverName;
+    const music = document.getElementById("music");
+    if (music) music.play();
 
-    document.getElementById("music").play();
-    typeText();
+    startTyping(); // لو عندك كتابة تلقائية
   } else {
-    error.innerText = "الباسورد غلط 😅 جربي تاني";
+    document.getElementById("error").innerText = "❌ الباسورد غلط، جرّبي تاني";
   }
 }
 
@@ -41,3 +43,4 @@ function typeText() {
     setTimeout(typeText, 60);
   }
 }
+
