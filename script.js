@@ -18,9 +18,12 @@ const message = `
 let index = 0;
 
 function checkPassword() {
-  const input = document.getElementById("password").value.trim();
+  let input = document.getElementById("password").value.trim();
+  const error = document.getElementById("error");
 
-  // تاريخ الميلاد بالصّيغة اللي إنت عايزها
+  // نحول أي صيغة لشكل موحد
+  input = input.replace(/\s/g, "");
+
   const correctPassword = "24/4/2002";
 
   if (input === correctPassword) {
@@ -30,9 +33,13 @@ function checkPassword() {
     const music = document.getElementById("music");
     if (music) music.play();
 
-    startTyping(); // لو عندك كتابة تلقائية
+    // لو اسمها typeText عندك
+    if (typeof typeText === "function") typeText();
+    // أو لو اسمها startTyping
+    if (typeof startTyping === "function") startTyping();
+
   } else {
-    document.getElementById("error").innerText = "❌ الباسورد غلط، جرّبي تاني";
+    error.innerText = "❌ الباسورد غلط، جرّبي تاني";
   }
 }
 
@@ -43,4 +50,5 @@ function typeText() {
     setTimeout(typeText, 60);
   }
 }
+
 
