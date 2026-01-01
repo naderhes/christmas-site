@@ -1,6 +1,5 @@
 const correctPassword = "24/4/2002";
 
-// الباسورد
 function checkPassword() {
   const input = document.getElementById("password").value.trim();
   const error = document.getElementById("error");
@@ -8,13 +7,14 @@ function checkPassword() {
   if (input === correctPassword) {
     document.getElementById("login").style.display = "none";
     document.getElementById("content").classList.remove("hidden");
-    document.getElementById("music").play();
+
+    const music = document.getElementById("music");
+    if (music) music.play();
   } else {
     error.innerText = "❌ الباسورد غلط، جربي تاني";
   }
 }
 
-// السلايدر
 let current = 0;
 const images = [
   "images/1.jpg",
