@@ -1,67 +1,79 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  background: #e85a78;
   color: white;
   text-align: center;
-}
-
-#login {
-  margin-top: 100px;
-}
-
-#login input {
-  padding: 10px;
-  font-size: 16px;
-}
-
-#login button {
-  padding: 10px 15px;
-  margin-left: 5px;
-  cursor: pointer;
 }
 
 .hidden {
   display: none;
 }
 
-.title {
-  margin-top: 40px;
-  font-size: 32px;
+.section {
+  padding: 60px 20px;
 }
 
-.slider-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 0;
+.login {
+  padding-top: 120px;
 }
 
-.slider-img {
-  width: 280px;
-  border-radius: 20px;
-  margin: 0 15px;
+.login input {
+  padding: 10px;
+  font-size: 16px;
 }
 
-.arrow {
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
+.login button {
+  padding: 10px 20px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
-.message {
-  margin: 80px auto;
-  width: 80%;
+.slider {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  background: rgba(255,255,255,0.6);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.left { left: -40px; }
+.right { right: -40px; }
+
+.dots {
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff5;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.dot.active {
+  background: white;
+}
+
+.text {
+  line-height: 2;
+  font-size: 18px;
+}
+
+.end {
   font-size: 20px;
-}
-
-.music-box {
-  margin: 80px 0;
-}
-
-.footer {
-  margin: 100px 0;
-  font-size: 22px;
 }
