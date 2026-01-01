@@ -1,65 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Merry Christmas ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- شاشة الباسورد -->
-  <div id="login">
-    <h2>🎁 مفاجأة ليكي</h2>
-    <p>اكتبي تاريخ ميلادك ❤️</p>
-    <input type="text" id="password" placeholder="24/4/2002">
-    <button onclick="checkPassword()">دخول</button>
-    <p id="error"></p>
-  </div>
+<!-- شاشة الباسورد -->
+<div id="login" class="login">
+  <h2>🎁 مفاجأة ليكي 🎁</h2>
+  <p>اكتبي تاريخ ميلادك ❤️</p>
+  <input type="password" id="password" placeholder="24/4/2002">
+  <button onclick="checkPassword()">دخول</button>
+  <p id="error"></p>
+</div>
 
-  <!-- المحتوى -->
-  <div id="content" class="hidden">
+<!-- المحتوى -->
+<div id="content" class="hidden">
 
-    <!-- العنوان -->
-    <h1 class="title">
-      🎄 Merry Christmas <br>
-      ❤️ هاجر
-    </h1>
+  <!-- العنوان -->
+  <section class="section">
+    <h1>🎄 Merry Christmas</h1>
+    <h2>❤️ هاجر</h2>
+  </section>
 
-    <!-- السلايدر -->
-    <div class="slider-container">
-      <button class="arrow" onclick="prevImage()">❮</button>
-      <img id="sliderImage" src="images/1.jpg" class="slider-img">
-      <button class="arrow" onclick="nextImage()">❯</button>
+  <!-- السلايدر -->
+  <section class="section">
+    <div class="slider">
+      <button class="arrow left" onclick="prevImage()">‹</button>
+      <img id="sliderImage" src="images/1.jpg">
+      <button class="arrow right" onclick="nextImage()">›</button>
     </div>
 
-    <!-- الكلام -->
-    <div class="message">
-      <p>
-        انتي أحلى حاجة حصلت في حياتي ❤️  
-        وجودك جنبي فرق كل حاجة  
-        وكل سنة وإنتي معايا يا هاجر
-      </p>
-    </div>
+    <div class="dots" id="dots"></div>
+  </section>
 
-    <!-- الموسيقى -->
-    <div class="music-box">
-      <p>🎵 الموسيقى</p>
-      <audio id="music" controls>
-        <source src="music/song.mp3" type="audio/mpeg">
-      </audio>
-    </div>
+  <!-- الكلام -->
+  <section class="section text">
+    انتي أحلى حاجة حصلتلي في حياتي ❤️  
+    وجودك جنبي فرّق كل حاجة  
+    وكل سنة وانتي معايا يا هاجر
+  </section>
 
-    <!-- الإهداء -->
-    <div class="footer">
-      <h2>🎉 كل سنة وإنتي طيبة يا هجورتي</h2>
-      <p>( نادر خطاب ) ❤️</p>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+  <!-- الموسيقى -->
